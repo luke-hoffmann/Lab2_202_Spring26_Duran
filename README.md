@@ -23,10 +23,18 @@
 * Employ non-destructive methodologies exclusively.
 * Verify the integrity of your solution by ensuring all provided test cases continue to pass.
 
-## Day 2 Details
-* Review the  algorithms provided to you.
-* Determine the asymptotic time complexity (Big O notation) for the function.
-* Articulate a rigorous justification for your analysis in the designated space on your sign-off sheet.
+Day 2 Details
+* Review the quadratic search algorithm provided to you.
+
+* Determine the asymptotic time complexity (Big O notation) for the function. Hint: I can tell you right away that the time complexity is neither linear nor quadratic.
+
+* Consider the worst-case scenario. The worst case is not finding the last element, but rather the second-to-last element.
+
+* Analyze the jumps. Finding the last element requires k jumps, landing at index k^2 (meaning n = k^2). However, for the worst-case second-to-last element, the algorithm must jump back and linearly iterate through the resulting "mini-list" between jumps.
+
+* Articulate a rigorous justification for your analysis in the designated space on your sign-off sheet. To solve this, you need to answer: how many elements are in that mini-list?
+
+* Mini-list size = k^2 - (k-1)^2 = Expand the polynomial: k^2 - (k^2 - 2k + 1)
 
 ## Day 3 Details
 * **Specification:** "Design a function that processes a collection of stock data (comprising open price, close price, and date) to compute an aggregate metric, such as a collection of average weekly prices."
